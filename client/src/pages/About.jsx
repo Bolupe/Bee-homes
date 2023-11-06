@@ -52,11 +52,11 @@ export default function About() {
         <h1 className='text-slate-700 font-bold text-3xl lg:text-6xl'>
           Find your next <span className='text-slate-500'>perfect</span>
           <br />
-          place with ease
+          apartment with ease
         </h1>
         <div className='text-gray-400 text-xs sm:text-sm'>
-          Real Estate is the best place to find your next perfect place to
-          live.
+          Bee's homes is the best place to find your next perfect house to
+          make a home.
           <br />
           We have a wide range of properties for you to choose from.
         </div>
@@ -73,14 +73,14 @@ export default function About() {
         {offerListings &&
           offerListings.length > 0 &&
           offerListings.map((listing) => (
-            <SwiperSlide key={listing._id}>
-              <ListingItem listing={listing} />
+            <SwiperSlide>
               <div
                 style={{
                   background: `url(${listing.imageUrls[0]}) center no-repeat`,
                   backgroundSize: 'cover',
                 }}
                 className='h-[500px]'
+                key={listing._id}
               ></div>
             </SwiperSlide>
           ))}
